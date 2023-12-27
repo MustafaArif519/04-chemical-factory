@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate  } from 'react-router-
 import Navigation from './Navigation';
 import ErrorPage from './ErrorPage';
 import Home from './home/Home';
+import Footer from './footer/Footer';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path="*" element={<ErrorPage />} />
           </Routes>
 
+          <Footer />
         </Router>
     </>
   )

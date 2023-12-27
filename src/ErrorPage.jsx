@@ -19,7 +19,7 @@ const ErrorPage = () => {
   return (
     <>
 
-<title>Page Not Found | Farida&#39;s Cake Boutique</title>
+<title>Page Not Found | GPM</title>
 
 
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
