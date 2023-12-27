@@ -8,20 +8,57 @@ import {
     MDBCardFooter,
     MDBCardGroup,
     MDBRow,
-    MDBCol
+    MDBCol,
+    MDBBtn,
+    MDBRipple,
+    MDBIcon 
 } from 'mdb-react-ui-kit';
 
 
 export default function DoMore() {
+
+    const gradientStyle = {
+        backgroundImage: 'linear-gradient(to right bottom, #61cfc3, #58d1bd, #51d4b6, #4dd5ad, #4ed7a3, #52d99e, #56db98, #5cdd92, #61e191, #66e490, #6ce88f, #71eb8e)',
+        // Add other styles as needed
+        width: '100%',
+        height: '800',
+    };
+
+    const certificateStyle = {
+        position: '',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '300px',
+        objectFit: 'cover',
+        objectPosition: 'center',
+      };
+
+      const downloadCertificate = () => {
+        const certificateUrl = import.meta.env.BASE_URL + 'files/minority_cert_exp_2020.pdf';
+    
+        // Create an anchor element for download
+        const a = document.createElement('a');
+        a.href = certificateUrl;
+        a.download = 'minority_cert_exp_2020.pdf';
+    
+        // Append the anchor to the document body and trigger the click event
+        document.body.appendChild(a);
+        a.click();
+    
+        // Remove the anchor from the document body
+        document.body.removeChild(a);
+      };
+
     return (
         <>
-        <div
-                    className='p-5 text-center bg-image'
-                    style={{ backgroundImage: "url('https://mdbootstrap.com/img/new/slides/041.webp')", height: 800 }}
-                >
-            <MDBRow className='mb-3'>
+            <div
+                className='p-5 text-center bg-light'
+                style={gradientStyle}
+            >
+                <MDBRow className='mb-3'>
 
-                
+
                     <div >
                         <div className='d-flex justify-content-center align-items-center h-50'>
                             <div >
@@ -38,50 +75,112 @@ export default function DoMore() {
                             </div>
                         </div>
                     </div>
-                
-            </MDBRow>
-            <MDBRow className='mb-3'>
-            <MDBCol className='mb-4'>
-                <MDBCard>
-                    <MDBCardImage src={import.meta.env.BASE_URL+"images/improveCard.jpg"} alt='...' position='top' />
-                    <MDBCardBody>
-                        <MDBCardTitle>Improve Products</MDBCardTitle>
-                        <MDBCardText>
-                        GPM designs and produces components & materials that have superior
-                         performance properties, reduced weight, and are cost effective.
-                        </MDBCardText>
-                    </MDBCardBody>
 
-                </MDBCard>
-                </MDBCol>
-                <MDBCol className='mb-4'>
-                <MDBCard>
-                    <MDBCardImage src={import.meta.env.BASE_URL+"images/optimizeCard.jpg"} alt='...' position='top' />
-                    <MDBCardBody>
-                        <MDBCardTitle>Optimize the Process</MDBCardTitle>
-                        <MDBCardText>
-                        GPM parts and materials help reduce part cost and optimize 
-                        application design through elimination of assembly operations and 
-                        part integration.
-                        </MDBCardText>
-                    </MDBCardBody>
+                </MDBRow>
+                <MDBRow className='mb-3'>
+                    <MDBCol className='mb-4'>
+                        <MDBCard className='h-100'>
+                            <MDBCardImage src={import.meta.env.BASE_URL + "images/improveCard.jpg"}
+                                alt='...' position='top'
+                                style={{ maxHeight: "250px" }}
+                            />
+                            <MDBCardBody>
+                                <MDBCardTitle>Improve Products</MDBCardTitle>
+                                <MDBCardText>
+                                    GPM designs and produces components & materials that have superior
+                                    performance properties, reduced weight, and are cost effective.
+                                </MDBCardText>
+                            </MDBCardBody>
 
-                </MDBCard>
-                </MDBCol>
-                <MDBCol className='mb-4'>
-                <MDBCard>
-                    <MDBCardImage src={import.meta.env.BASE_URL+"images/greenCard.jpg"} alt='...' position='top' />
-                    <MDBCardBody>
-                        <MDBCardTitle>Go Green</MDBCardTitle>
-                        <MDBCardText>
-                        Our parts and materials are responsibly manufactured using 
-                        upwards of 35% recycled and Soy Bio-renewable content.
-                        </MDBCardText>
-                    </MDBCardBody>
+                        </MDBCard >
+                    </MDBCol>
+                    <MDBCol className='mb-4'>
+                        <MDBCard className='h-100'>
+                            <MDBCardImage src={import.meta.env.BASE_URL + "images/optimizeCard.jpg"}
+                                alt='...' position='top'
+                                style={{ maxHeight: "250px" }}
+                            />
+                            <MDBCardBody>
+                                <MDBCardTitle>Optimize the Process</MDBCardTitle>
+                                <MDBCardText>
+                                    GPM parts and materials help reduce part cost and optimize
+                                    application design through elimination of assembly operations and
+                                    part integration.
+                                </MDBCardText>
+                            </MDBCardBody>
 
-                </MDBCard>
-                </MDBCol>
-            </MDBRow>
+                        </MDBCard>
+                    </MDBCol>
+                    <MDBCol className='mb-4'>
+                        <MDBCard className='h-100'>
+                            <MDBCardImage src={import.meta.env.BASE_URL + "images/greenCard.jpg"}
+                                alt='...' position='top'
+                                style={{ maxHeight: "250px" }}
+                            />
+                            <MDBCardBody>
+                                <MDBCardTitle>Go Green</MDBCardTitle>
+                                <MDBCardText>
+                                    Our parts and materials are responsibly manufactured using
+                                    upwards of 35% recycled and Soy Bio-renewable content.
+                                </MDBCardText>
+                            </MDBCardBody>
+
+                        </MDBCard>
+                    </MDBCol>
+                </MDBRow>
+                <MDBRow className='mb-3'>
+                <MDBCol md='8'>
+                    <MDBCard style={{ maxWidth: '540px' }}>
+                        <MDBRow className='g-0'>
+                            <MDBCol md='4'>
+                            <MDBRipple rippleColor='light' rippleTag='div' 
+                            className='bg-image hover-overlay'>
+                                <div className='bg-image hover-zoom'>
+                                <MDBCardImage 
+                               src={import.meta.env.BASE_URL + "images/certificate.png"}
+                                alt='...' fluid 
+                                style={certificateStyle}
+                                />
+                                </div>
+                                </MDBRipple>
+                            </MDBCol>
+                            <MDBCol md='8'>
+                                <MDBCardBody>
+                                    <MDBCardTitle>MMSDC Certified</MDBCardTitle>
+                                    <MDBCardText>
+                                    Green Polymeric Materials, INC. is proud to be an MMSDC certified
+                                    minority business enterprise. To view our certificate, please
+                                     click below
+                                    </MDBCardText>
+                                    <br />
+                                    <br />
+                                    <MDBCardFooter>
+                                        <MDBBtn color="secondary" onClick={downloadCertificate}>
+                                            <MDBIcon fas icon="file-download" />
+                                            
+                                            Certificate
+                                            </MDBBtn>
+                                    </MDBCardFooter>
+                                </MDBCardBody>
+                            </MDBCol>
+
+ 
+                        </MDBRow>
+                    </MDBCard>
+
+                    </MDBCol>
+                    <MDBCol md='4'>
+                                <h2>
+                                2015 UTECH Polyurethane Automotive and Sustainability Conference
+                                </h2>
+                                <p>
+                                Green Polymeric Materials, Inc. had the honor of presenting at 
+                                the 2015 UTECH Polyurethane Automotive and Sustainability 
+                                Conference. 
+                                </p>
+
+                            </MDBCol>
+                </MDBRow>
             </div>
         </>
     );
