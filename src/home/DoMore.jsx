@@ -11,8 +11,10 @@ import {
     MDBCol,
     MDBBtn,
     MDBRipple,
-    MDBIcon 
+    MDBCardHeader,
+    MDBIcon
 } from 'mdb-react-ui-kit';
+import { TypeAnimation } from 'react-type-animation';
 
 
 export default function DoMore() {
@@ -29,26 +31,26 @@ export default function DoMore() {
         top: 0,
         left: 0,
         width: '100%',
-        height: '300px',
+    height: '300px',
         objectFit: 'cover',
         objectPosition: 'center',
-      };
+    };
 
-      const downloadCertificate = () => {
+    const downloadCertificate = () => {
         const certificateUrl = import.meta.env.BASE_URL + 'files/minority_cert_exp_2020.pdf';
-    
+
         // Create an anchor element for download
         const a = document.createElement('a');
         a.href = certificateUrl;
         a.download = 'minority_cert_exp_2020.pdf';
-    
+
         // Append the anchor to the document body and trigger the click event
         document.body.appendChild(a);
         a.click();
-    
+
         // Remove the anchor from the document body
         document.body.removeChild(a);
-      };
+    };
 
     return (
         <>
@@ -59,22 +61,37 @@ export default function DoMore() {
                 <MDBRow className='mb-3'>
 
 
-                    <div >
+
                         <div className='d-flex justify-content-center align-items-center h-50'>
-                            <div >
-                                <h1 className='mb-3 ' >
-                                    Do more with Green Polymeric Materials
-                                </h1>
-                                <p className=''>
-                                    Green Polymeric Materials, Inc. manufactures and supplies high-performance
-                                    recycled rubber based components and materials for the automotive, appliance,
-                                    aerospace, and heavy transportation industries. We have shipped over 100 million
-                                    parts world-wide for use in over 50 platforms for Ford, GM, Nissan, Honda, Mercedes,
-                                    and BMW.
-                                </p>
-                            </div>
+
+                                <MDBCard className=''
+                                alignment='center'style = {{width: "800px"}}>
+                                    <MDBCardBody>
+                                        <MDBCardTitle>Do more with Green Polymeric Materials</MDBCardTitle>
+                                        <MDBCardText>
+                                        <TypeAnimation
+                                        sequence={[
+                                            // Same substring at the start will only be typed out once, initially
+                                            'Green Polymeric Materials, Inc. manufactures and supplies high-performance\
+                                            recycled rubber based components and materials for the automotive, appliance,\
+                                            aerospace, and heavy transportation industries. We have shipped over 100 million\
+                                            parts world-wide for use in over 50 platforms for Ford, GM, Nissan, Honda, Mercedes,\
+                                            and BMW.',
+
+                                        ]}
+                                        wrapper="span"
+                                        speed={50}
+
+                                        repeat={0}
+                                    />
+                                    </MDBCardText>
+                                        
+                                    </MDBCardBody>
+
+                                </MDBCard>
+
                         </div>
-                    </div>
+
 
                 </MDBRow>
                 <MDBRow className='mb-3'>
@@ -129,57 +146,57 @@ export default function DoMore() {
                     </MDBCol>
                 </MDBRow>
                 <MDBRow className='mb-3'>
-                <MDBCol md='8'>
-                    <MDBCard style={{ maxWidth: '540px' }}>
-                        <MDBRow className='g-0'>
-                            <MDBCol md='4'>
-                            <MDBRipple rippleColor='light' rippleTag='div' 
-                            className='bg-image hover-overlay'>
-                                <div className='bg-image hover-zoom'>
-                                <MDBCardImage 
-                               src={import.meta.env.BASE_URL + "images/certificate.png"}
-                                alt='...' fluid 
-                                style={certificateStyle}
-                                />
-                                </div>
-                                </MDBRipple>
-                            </MDBCol>
-                            <MDBCol md='8'>
-                                <MDBCardBody>
-                                    <MDBCardTitle>MMSDC Certified</MDBCardTitle>
-                                    <MDBCardText>
-                                    Green Polymeric Materials, INC. is proud to be an MMSDC certified
-                                    minority business enterprise. To view our certificate, please
-                                     click below
-                                    </MDBCardText>
-                                    <br />
-                                    <br />
-                                    <MDBCardFooter>
-                                        <MDBBtn color="secondary" onClick={downloadCertificate}>
-                                            <MDBIcon fas icon="file-download" />
-                                            
-                                            Certificate
-                                            </MDBBtn>
-                                    </MDBCardFooter>
-                                </MDBCardBody>
-                            </MDBCol>
+                    <MDBCol md='8'>
+                        <MDBCard style={{ maxWidth: '540px' }}>
+                            <MDBRow className='g-0'>
+                                <MDBCol md='4'>
+                                    <MDBRipple rippleColor='light' rippleTag='div'
+                                        className='bg-image hover-overlay'>
+                                        <div className='bg-image hover-zoom'>
+                                            <MDBCardImage
+                                                src={import.meta.env.BASE_URL + "images/certificate.png"}
+                                                alt='...' fluid
+                                                style={certificateStyle}
+                                            />
+                                        </div>
+                                    </MDBRipple>
+                                </MDBCol>
+                                <MDBCol md='8'>
+                                    <MDBCardBody>
+                                        <MDBCardTitle>MMSDC Certified</MDBCardTitle>
+                                        <MDBCardText>
+                                            Green Polymeric Materials, INC. is proud to be an MMSDC certified
+                                            minority business enterprise. To view our certificate, please
+                                            click below
+                                        </MDBCardText>
+                                        <br />
+                                        <br />
+                                        <MDBCardFooter>
+                                            <MDBBtn color="secondary" onClick={downloadCertificate}>
+                                                <MDBIcon fas icon="file-download" />
 
- 
-                        </MDBRow>
-                    </MDBCard>
+                                                Certificate
+                                            </MDBBtn>
+                                        </MDBCardFooter>
+                                    </MDBCardBody>
+                                </MDBCol>
+
+
+                            </MDBRow>
+                        </MDBCard>
 
                     </MDBCol>
                     <MDBCol md='4'>
-                                <h2>
-                                2015 UTECH Polyurethane Automotive and Sustainability Conference
-                                </h2>
-                                <p>
-                                Green Polymeric Materials, Inc. had the honor of presenting at 
-                                the 2015 UTECH Polyurethane Automotive and Sustainability 
-                                Conference. 
-                                </p>
+                        <h2>
+                            2015 UTECH Polyurethane Automotive and Sustainability Conference
+                        </h2>
+                        <p>
+                            Green Polymeric Materials, Inc. had the honor of presenting at
+                            the 2015 UTECH Polyurethane Automotive and Sustainability
+                            Conference.
+                        </p>
 
-                            </MDBCol>
+                    </MDBCol>
                 </MDBRow>
             </div>
         </>

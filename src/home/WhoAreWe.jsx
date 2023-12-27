@@ -8,6 +8,8 @@ import {
   MDBNavbarLink,
   MDBContainer
 } from 'mdb-react-ui-kit';
+import { TypeAnimation } from 'react-type-animation';
+
 
 export default function WhoAreWe() {
   return (
@@ -22,6 +24,7 @@ export default function WhoAreWe() {
             <div className='text-white'>
               <h1 className='mb-3'>Who is GPM?</h1>
               <h3 className='mb-3'>
+                
               A pioneer in injection molded polyurethane manufacturing. Protecting the environment. 
               Improving how we live.
               </h3>
