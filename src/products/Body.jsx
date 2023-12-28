@@ -35,7 +35,7 @@ export default function Body() {
         display: 'flex',
         justifyContent: 'flex-end', // Center on the right
 
-        height: '100vh', // Adjust the height as needed
+        
       };
 
     return (
@@ -114,7 +114,22 @@ export default function Body() {
                         </MDBRipple>
                         </MDBCol>
                     </MDBRow>
+<MDBRow>
+<h1>Material Selection Guidelines</h1>
 
+<p>Our advanced polymer research team can develop the best material for your application. Common material and product considerations include the following:</p>
+<p>
+<ul>
+  <li>Temperature range resistance</li>
+  <li>Resistance to oils and other fluids</li>
+  <li>Sealing from fluids and weather resistance</li>
+  <li>Durability, longevity, and physical strength</li>
+  <li>Industry and military standards</li>
+  <li>Environmental impact</li>
+</ul>
+</p>
+
+</MDBRow>
 
                 </div>
             </header>
