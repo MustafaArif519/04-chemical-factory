@@ -19,7 +19,9 @@ export default function Navigation() {
     return (
         <MDBNavbar fixed='top' expand='lg' light bgColor='light'>
             <MDBContainer fluid>
-                <MDBNavbarBrand href='#'>Home</MDBNavbarBrand>
+                <MDBNavbarBrand ><NavLink to="/">
+                                GPM
+                            </NavLink  ></MDBNavbarBrand>
                 <MDBNavbarToggler
                     aria-expanded='false'
                     aria-label='Toggle navigation'
@@ -31,7 +33,7 @@ export default function Navigation() {
                     <MDBNavbarNav>
 
                         <MDBNavbarLink href='#'>
-                            <NavLink to="/prdoucts">
+                            <NavLink to="/products">
                                 Products
                             </NavLink  >
                         </MDBNavbarLink>
