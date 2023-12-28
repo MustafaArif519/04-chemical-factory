@@ -32,25 +32,25 @@ export default function Navigation() {
                 <MDBCollapse navbar open={openNavSecond}>
                     <MDBNavbarNav>
 
-                        <MDBNavbarLink href='#'>
+                        <MDBNavbarLink >
                             <NavLink to="/products">
                                 Products
                             </NavLink  >
                         </MDBNavbarLink>
 
-                        <MDBNavbarLink href='#'>
+                        <MDBNavbarLink >
                             <NavLink to="/why">
                                 Why GPM?
                             </NavLink  >
                         </MDBNavbarLink>
 
-                        <MDBNavbarLink href='#'>
+                        <MDBNavbarLink >
                             <NavLink to="/about">
                                 About Us
                             </NavLink  >
                         </MDBNavbarLink>
 
-                        <MDBNavbarLink href='#'>
+                        <MDBNavbarLink >
                             <NavLink to="/contact">
                                 Contact
                             </NavLink  >

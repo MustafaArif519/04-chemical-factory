@@ -69,21 +69,12 @@ export default function DoMore() {
                                     <MDBCardBody>
                                         <MDBCardTitle>Do more with Green Polymeric Materials</MDBCardTitle>
                                         <MDBCardText>
-                                        <TypeAnimation
-                                        sequence={[
-                                            // Same substring at the start will only be typed out once, initially
-                                            'Green Polymeric Materials, Inc. manufactures and supplies high-performance\
-                                            recycled rubber based components and materials for the automotive, appliance,\
-                                            aerospace, and heavy transportation industries. We have shipped over 100 million\
-                                            parts world-wide for use in over 50 platforms for Ford, GM, Nissan, Honda, Mercedes,\
-                                            and BMW.',
 
-                                        ]}
-                                        wrapper="span"
-                                        speed={50}
-
-                                        repeat={0}
-                                    />
+                                            Green Polymeric Materials, Inc. manufactures and supplies high-performance
+                                            recycled rubber based components and materials for the automotive, appliance,
+                                            aerospace, and heavy transportation industries. We have shipped over 100 million
+                                            parts world-wide for use in over 50 platforms for Ford, GM, Nissan, Honda, Mercedes,
+                                            and BMW.
                                     </MDBCardText>
                                         
                                     </MDBCardBody>

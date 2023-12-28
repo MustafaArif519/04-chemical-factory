@@ -8,6 +8,8 @@ import {
   MDBNavbarLink,
   MDBContainer
 } from 'mdb-react-ui-kit';
+import Header from './Header';
+import Body from './Body';
 
 
 
@@ -16,7 +18,8 @@ export default function Product() {
     
    <>
    <title>Products | GPM</title>
-
+    <Header />
+    <Body />
    
    </>
 
