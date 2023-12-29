@@ -165,7 +165,7 @@ height: '300px',
 
           <MDBRow>
 
-            <MDBCol md='7'>
+            <MDBCol md='7' className='mb-3'>
             <MDBCard style={{  }}>
                             <MDBRow className='g-0'>
                                 <MDBCol md='4'>
@@ -205,7 +205,7 @@ height: '300px',
                         </MDBCard>
             </MDBCol>
 
-            <MDBCol md='5'>
+            <MDBCol md='5' className='mb-3'>
               <MDBCard style={{}}>
                 <MDBCardBody>
                   <MDBCardTitle>GPM Overview</MDBCardTitle>

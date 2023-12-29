@@ -46,7 +46,7 @@ export default function Body() {
                 <div className='p-5 text-left '>
                     <MDBRow >
 
-                        <MDBCol className='mb-9'>
+                        <MDBCol md='9' >
                             <h1>
                                 Products and Materials
                             </h1>
@@ -66,8 +66,8 @@ export default function Body() {
                             </p>
                         </MDBCol>
 
-                        <MDBCol className='mb-3' style={containerStyle}>
-                        <MDBCard className='h-100' style = {{maxWidth:"300px", maxHeight: "450px"}}>
+                        <MDBCol md='3' className='mb-3' style={containerStyle}>
+                        <MDBCard  style = {{maxWidth:"300px"}}>
                             <MDBCardImage src={import.meta.env.BASE_URL + "images/molds-1-0.jpg"}
                                 alt='...' position='top'
                                 style={{ maxHeight: "250px" }}
