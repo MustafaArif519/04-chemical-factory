@@ -19,7 +19,7 @@ export default function Navigation() {
     return (
         <MDBNavbar fixed='top' expand='lg' light bgColor='light'>
             <MDBContainer fluid>
-                <MDBNavbarBrand ><NavLink to="/">
+                <MDBNavbarBrand onClick={() => setOpenNavSecond(false)} ><NavLink to="/">
                                 GPM
                             </NavLink  ></MDBNavbarBrand>
                 <MDBNavbarToggler
@@ -29,32 +29,32 @@ export default function Navigation() {
                 >
                     <MDBIcon icon='bars' fas />
                 </MDBNavbarToggler>
-                <MDBCollapse navbar open={openNavSecond}>
-                    <MDBNavbarNav>
+                <MDBCollapse navbar center open={openNavSecond}>
+                    <MDBNavbarNav fullWidth={false} className='mb-2 mb-lg-0'>
 
                         <MDBNavbarLink >
-                            <NavLink to="/products">
+                            <NavLink to="/products" onClick={() => setOpenNavSecond(false)}>
                                 Products
                             </NavLink  >
                         </MDBNavbarLink>
 
                         <MDBNavbarLink >
-                            <NavLink to="/why">
+                            <NavLink to="/why" onClick={() => setOpenNavSecond(false)}>
                                 Why GPM?
                             </NavLink  >
                         </MDBNavbarLink>
 
                         <MDBNavbarLink >
-                            <NavLink to="/about">
+                            <NavLink to="/about" onClick={() => setOpenNavSecond(false)}>
                                 About Us
                             </NavLink  >
                         </MDBNavbarLink>
 
-                        <MDBNavbarLink >
+                        {/* <MDBNavbarLink >
                             <NavLink to="/contact">
                                 Contact
                             </NavLink  >
-                        </MDBNavbarLink>
+                        </MDBNavbarLink> */}
 
                     </MDBNavbarNav>
                 </MDBCollapse>

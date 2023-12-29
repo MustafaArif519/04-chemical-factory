@@ -1,4 +1,4 @@
-import React from 'react';
+import {useEffect} from 'react';
 import {
   MDBNavbar,
   MDBNavbarToggler,
@@ -15,6 +15,13 @@ import Trusted from './Trusted';
 
 
 export default function Home() {
+  useEffect(() => {
+    // Scroll to the top when the component is mounted
+    window.scrollTo(0, 0);
+
+    // You can also use the following line for smooth scrolling (if supported by the browser)
+    // window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
   return (
     
    <>

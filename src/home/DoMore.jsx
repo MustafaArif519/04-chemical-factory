@@ -164,7 +164,7 @@ export default function DoMore() {
                                         <br />
                                         <MDBCardFooter>
                                             <MDBBtn color="secondary" onClick={downloadCertificate}>
-                                                <MDBIcon fas icon="file-download" />
+                                                <MDBIcon fas className='me-2' icon="file-download" />
 
                                                 Certificate
                                             </MDBBtn>
